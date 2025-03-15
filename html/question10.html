@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frameset Example</title>
+</head>
+<frameset rows="30%, 70%">
+    <frameset cols="50%, 50%">
+        <frame srcdoc="<html><body><h3>Frame 1</h3></body></html>" name="frame1">
+        <frame srcdoc="<html><body><h3>Frame 3</h3></body></html>" name="frame3">
+    </frameset>
+    <frameset cols="30%, 70%">
+        <frame srcdoc="<html><body><h3>Frame 2</h3></body></html>" name="frame2">
+        <frameset rows="40%, 60%">
+            <frameset cols="50%, 50%">
+                <frame srcdoc="<html><body><h3>Frame 4</h3></body></html>" name="frame4">
+                <frame srcdoc="<html><body><h3>Frame 5</h3></body></html>" name="frame5">
+            </frameset>
+            <frameset cols="33%, 33%, 34%">
+                <frame srcdoc="<html><body><h3>Frame 6</h3></body></html>" name="frame6a">
+                <frame srcdoc="<html><body><h3>Frame 6</h3></body></html>" name="frame6b">
+                <frame srcdoc="<html><body><h3>Frame 6</h3></body></html>" name="frame6c">
+            </frameset>
+        </frameset>
+    </frameset>
+</frameset>
+</html>

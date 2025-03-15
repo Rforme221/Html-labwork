@@ -1,0 +1,32 @@
+body{
+    font-family: Arial,sans-serif;
+    background-color: #f4f4f4;
+    margin:0;
+    padding: 20px;
+    text-align: center;
+}
+.cv-container{
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0.2);
+}
+header{
+    background: #0073e6;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+h1, h2{
+    margin: 5px 0;
+}
+section{
+    padding: 10px;
+    text-align:left ;
+}
+ul{
+    list-style-type: square;
+}
+
