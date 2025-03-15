@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map </title>
+</head>
+<body>
+
+    <h2>Interactive Image Map with Shapes</h2>
+    <p>Click on different parts of the image to navigate:</p>
+
+    <!-- Image with Map -->
+    <img src="/my-project/download.jpg" usemap="#shapes" width="600" height="400" alt="Image Map Example">
+
+    <!-- Image Map Definition -->
+    <map name="shapes">
+        <!-- Rectangle Shape (X1, Y1, X2, Y2) -->
+        <area shape="rect" coords="50,50,200,150" href="https://www.facebook.com" alt="Rectangle Area">
+
+        <!-- Circle Shape (CenterX, CenterY, Radius) -->
+        <area shape="circle" coords="350,100,50" href="https://www.youtube.com/" alt="Circle Area">
+
+        <!-- Polygon Shape (Multiple X, Y coordinates) -->
+        <area shape="poly" coords="250,200,300,250,350,200,320,150,280,150" href="https://www.instagram.com" alt="Polygon Area">
+    </map>
+
+</body>
+</html>

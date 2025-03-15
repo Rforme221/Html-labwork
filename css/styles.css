@@ -1,0 +1,11 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+header { background: #333; padding: 15px 0; text-align: center; }
+nav { display: flex; justify-content: center; gap: 20px; }
+nav a { color: white; text-decoration: none; padding: 10px 15px; }
+nav a:hover { background: #555; border-radius: 5px; }
+section { padding: 40px; text-align: center; }
+.gallery img { width: 100%; max-width: 300px; margin: 10px; border-radius: 10px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 10px 0; }
+.contact-form button { background: #333; color: white; padding: 10px; border: none; cursor: pointer; }
+.contact-form button:hover { background: #555; }
+@media (max-width: 600px) { nav { flex-direction: column; } }

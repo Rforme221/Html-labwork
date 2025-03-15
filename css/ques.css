@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #d3d3d3;
+    font-weight: bold;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+th[colspan="6"] {
+    font-size: 100px;
+    font-weight: bold;
+    background-color: #b0b0b0;
+}
+
+th[rowspan="6"] {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+th[colspan="5"] {
+    background-color: #f4f4f4;
+    font-size: 18px;
+}
