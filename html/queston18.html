@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration/Login Form</title>
+<link rel="stylesheet" href="/css/style4.css">
+</head>
+<body>
+  <div class="container">
+    <div class="register-form">
+      <h2>Register Form</h2>
+      <form>
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Enter Username">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Please enter valid email address">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Minimum six characters">
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password">
+        </div>
+        <div class="form-group">
+          <label>Gender:</label>
+          <div class="gender-options">
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="terms" name="terms">
+          <label for="terms">I have read and accept terms of use.</label>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="login-form">
+      <h2>Login form</h2>
+      <form>
+        <div class="form-group">
+          <label for="login-email">Enter Your Email:</label>
+          <input type="email" id="login-email" name="login-email">
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" name="login-password">
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="remember-me" name="remember-me">
+          <label for="remember-me">Remember me</label>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
