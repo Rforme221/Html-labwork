@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Responsive Menu (No JavaScript)</title>
-<link rel="stylesheet" href="style.css">
+<title>Responsive Menu</title>
+<link rel="stylesheet" href="/css/new3.css">
 </head>
 <body>
 
   <div class="header">
     <div class="logo">Mystery Code</div>
-
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="nav-mobile">
-      <div class="menu-icon">☰</div>
-    </label>
-
-    <nav class="nav-desktop">
+    <nav class="desktop-nav">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About Us</a></li>
@@ -24,18 +18,29 @@
         <li><a href="#">Contact Us</a></li>
       </ul>
     </nav>
-
-    <div class="mobile-menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
+    <div class="mobile-nav">
+      <button class="menu-toggle">Menu</button>
+      <div class="mobile-menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
     </div>
   </div>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
