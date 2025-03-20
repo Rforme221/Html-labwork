@@ -1,0 +1,101 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #222;
+  color: white;
+}
+
+/* Section Styling */
+.team-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Container Styling */
+.team-container {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card Styling */
+.card {
+  background-color: #fff;
+  color: black;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Image Styling */
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Text Styling */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Social Icons */
+.social-icons i {
+  font-size: 20px;
+  margin: 0 8px;
+  color: #555;
+  cursor: pointer;
+}
+
+.social-icons i:hover {
+  color: #007bff;
+}
+
+/* ------------------- Responsive Design ------------------- */
+
+/* Mobile Layout - Single Column */
+@media (max-width: 600px) {
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet Layout - Two Columns */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop Layout - Four Columns */
+@media (min-width: 1025px) {
+  .team-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,26 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Frameset Example</title>
+<title>Div-Based Layout</title>
+<style>
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .row1, .row2, .row3 {
+        display: flex;
+        flex: 1;
+    }
+
+    .row1 {
+        flex: 0.2;
+    }
+
+    .row2 {
+        flex: 0.6;
+    }
+
+    .row3 {
+        flex: 0.2;
+    }
+
+    .column {
+        flex: 1;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .fishes {
+        text-align: left;
+    }
+
+    .fishes h1 {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .fishes ol {
+        padding-left: 20px;
+    }
+
+    .figure p {
+        font-size: 0.9em;
+    }
+
+    .content h1 {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+    .content ol {
+        padding-left: 20px;
+    }
+</style>
 </head>
-<frameset rows="30%, 70%">
-    <frameset cols="50%, 50%">
-        <frame srcdoc="<html><body><h3>Frame 1</h3></body></html>" name="frame1">
-        <frame srcdoc="<html><body><h3>Frame 3</h3></body></html>" name="frame3">
-    </frameset>
-    <frameset cols="30%, 70%">
-        <frame srcdoc="<html><body><h3>Frame 2</h3></body></html>" name="frame2">
-        <frameset rows="40%, 60%">
-            <frameset cols="50%, 50%">
-                <frame srcdoc="<html><body><h3>Frame 4</h3></body></html>" name="frame4">
-                <frame srcdoc="<html><body><h3>Frame 5</h3></body></html>" name="frame5">
-            </frameset>
-            <frameset cols="33%, 33%, 34%">
-                <frame srcdoc="<html><body><h3>Frame 6</h3></body></html>" name="frame6a">
-                <frame srcdoc="<html><body><h3>Frame 6</h3></body></html>" name="frame6b">
-                <frame srcdoc="<html><body><h3>Frame 6</h3></body></html>" name="frame6c">
-            </frameset>
-        </frameset>
-    </frameset>
-</frameset>
+<body>
+
+<div class="container">
+    <div class="row1">
+        <div class="column">Frame 1</div>
+        <div class="column">Frame 2</div>
+        <div class="column">Frame 3</div>
+    </div>
+
+    <div class="row2">
+        <div class="column">Frame 4</div>
+        <div class="column">Frame 5</div>
+        <div class="column fishes">
+            <h1>Fishes</h1>
+            <ol>
+                <li>Guppy fish</li>
+                <li>Angel fish</li>
+                <li>Gold fish</li>
+                <li>Molly fish</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row3">
+        <div class="column">Frame 7</div>
+        <div class="column figure">
+            <h1>FIGURE</h1>
+            <p>You can see the image in this box if you click in Frame 5.</p>
+            <p>You can read a short comment about the figure in this box click the caption in the top frame.</p>
+        </div>
+        <div class="column content">
+            <h1>CONTENT</h1>
+            <ol>
+                <li>Birds</li>
+                <li>Animals</li>
+                <li>Fishes</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
