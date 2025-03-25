@@ -1,11 +1,13 @@
-/* Base styles */
-body {
-  font-family: sans-serif;
+/* styles.css */
+body, html {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 .header {
-  background-color: #003366; /* Dark blue background */
+  background-color: #003366; 
   color: white;
   padding: 15px;
   display: flex;
@@ -18,14 +20,12 @@ body {
   font-weight: bold;
 }
 
-/* Desktop Navigation */
 .desktop-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
 }
-
 .desktop-nav li {
   margin-left: 20px;
 }
@@ -35,9 +35,37 @@ body {
   text-decoration: none;
 }
 
-/* Mobile Navigation (initially hidden) */
 .mobile-nav {
   display: none;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px; /* Adjust based on header height */
+  left: 0;
+  width: 100%;
+  background-color: #061d34;
+  padding: 15px;
+  text-align: center;
+  z-index: 10; /* Ensure it's above other content */
+}
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style-type: none;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.mobile-menu ul li a {
+  color: rgb(244, 239, 239);
+  text-decoration: none;
+  font-size: 24px;
+  display: block;
+  padding: 20px;
 }
 
 .menu-toggle {
@@ -48,50 +76,18 @@ body {
   cursor: pointer;
 }
 
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: 60px; /* Adjust based on header height */
-  left: 0;
-  width: 100%;
-  background-color: #003366;
-  padding: 15px;
-  text-align: center;
-  z-index: 10; /* Ensure it's above other content */
-}
-
-.mobile-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mobile-menu li {
-  padding: 10px 0;
-  border-bottom: 1px solid #446699; /* Optional separator */
-}
-
-.mobile-menu li:last-child {
-  border-bottom: none;
-}
-
-.mobile-menu a {
-  color: white;
-  text-decoration: none;
-  display: block; /* Make the whole area clickable */
-  padding: 10px;
-}
-
-.mobile-menu.active {
-  display: block;
-}
-
-/* Media Query for Mobile View (example: screens smaller than 768px) */
-@media (max-width: 767px) {
+/* Responsive */
+@media (max-width: 768px) {
   .desktop-nav {
     display: none;
   }
   .mobile-nav {
     display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none;
   }
 }
